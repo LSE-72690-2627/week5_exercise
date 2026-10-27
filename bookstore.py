@@ -21,7 +21,9 @@ class Book(object):
 
 
     # Task 4: add a method __str__() that returns e.g. 'Persuasion by Jane Austen'
-
+    def __str__(self):
+        '''Returns a string of the full name.'''
+        return str(self.get_title()) + ' (' + str(self.author) + ')'
 
 book = Book('Persuasion', 'Jane Austen', 8.99)
 
@@ -29,8 +31,8 @@ book = Book('Persuasion', 'Jane Austen', 8.99)
 
 print(book.get_title())    # Task 1
 
-# print(book.get_price())    # Task 2
+print(book.get_price())    # Task 2
 
 # print(book.get_author())   # Task 3
 
-# print(book)                # Task 4
+print(book)                # Task 4
